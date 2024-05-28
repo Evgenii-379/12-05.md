@@ -3,11 +3,7 @@
 
 ## **Задание 1**
 
-- ![scrinshot](https://github.com/Evgenii-379/12-05.md/blob/main/Снимок%20экрана%202024-05-05%20230726.png)
-- ![scrinshot](https://github.com/Evgenii-379/12-05.md/blob/main/Снимок%20экрана%202024-05-05%20230854.png)
-- ![scrinshot](https://github.com/Evgenii-379/12-05.md/blob/main/Снимок%20экрана%202024-05-05%20231458.png)
-- ![scrinshot](https://github.com/Evgenii-379/12-05.md/blob/main/Снимок%20экрана%202024-05-05%20232042.png)
-
+- ![scrinshot](https://github.com/Evgenii-379/12-05.md/blob/main/Снимок%20экрана%202024-05-28%20212524.png)
 
 
 ## **Задание 2**
@@ -27,4 +23,12 @@ Table scan on <temporary>  (cost=2.5..2.5 rows=0) (actual time=4264..4264 rows=3
 -  Covering index lookup on r using rental_date (rental_date=p.payment_date)  (cost=0.656 rows=1.01) (actual time=820e-6..0.00116 rows=1.01 loops=634000)
 -    Single-row index lookup on c using PRIMARY (customer_id=r.customer_id)  (cost=250e-6 rows=1) (actual time=95.3e-6..110e-6 rows=1 loops=642000)
 -      Single-row covering index lookup on i using PRIMARY (inventory_id=r.inventory_id)  (cost=250e-6 rows=1) (actual time=82.2e-6..98.4e-6 rows=1 loops=642000)
+ 
+
+- ![scrinshot](https://github.com/Evgenii-379/12-05.md/blob/main/Снимок%20экрана%202024-05-28%20213147.png)
+- ![scrinshot](https://github.com/Evgenii-379/12-05.md/blob/main/Снимок%20экрана%202024-05-28%20213206.png)
+- ![scrinshot](https://github.com/Evgenii-379/12-05.md/blob/main/Снимок%20экрана%202024-05-28%20213403.png)
+
+Добавил индекс в таблицу customer: idx_first_name. Без JOIN скорость запроса с 3,52 секунд увеличилась до 3,48 секунд ( не значительно).
+
  
