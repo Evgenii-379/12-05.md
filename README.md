@@ -25,10 +25,14 @@ Table scan on <temporary>  (cost=2.5..2.5 rows=0) (actual time=4264..4264 rows=3
 -      Single-row covering index lookup on i using PRIMARY (inventory_id=r.inventory_id)  (cost=250e-6 rows=1) (actual time=82.2e-6..98.4e-6 rows=1 loops=642000)
  
 
-- ![scrinshot](https://github.com/Evgenii-379/12-05.md/blob/main/Снимок%20экрана%202024-05-28%20213147.png)
-- ![scrinshot](https://github.com/Evgenii-379/12-05.md/blob/main/Снимок%20экрана%202024-05-28%20213206.png)
-- ![scrinshot](https://github.com/Evgenii-379/12-05.md/blob/main/Снимок%20экрана%202024-05-28%20213403.png)
+- ![scrinshot](https://github.com/Evgenii-379/12-05.md/blob/main/Снимок%20экрана%202024-05-29%20233238.png)
+- ![scrinshot](https://github.com/Evgenii-379/12-05.md/blob/main/Снимок%20экрана%202024-05-29%20231737.png)
+- ![scrinshot](https://github.com/Evgenii-379/12-05.md/blob/main/Снимок%20экрана%202024-05-29%20213315.png)
 
-Добавил индекс в таблицу customer: idx_first_name. Без JOIN скорость запроса с 3,52 секунд увеличилась до 3,48 секунд ( не значительно).
+Добавил индекс в таблицу payment: fk_payment_date
+Таблица payment: индекс - fk_amount
+Таблица customer: индекс - idx_first_name
+При добавлении индексов время запроса уменьшилось с 3,52 секунд до 3,42
+
 
  
