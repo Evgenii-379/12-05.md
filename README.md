@@ -5,7 +5,7 @@
 
 - ![scrinshot](https://github.com/Evgenii-379/12-05.md/blob/main/Снимок%20экрана%202024-05-28%20212524.png)
 
-Убрал таблицу inventory
+
 
 ## **Задание 2**
 
@@ -27,6 +27,10 @@ Table scan on <temporary>  (cost=2.5..2.5 rows=0) (actual time=4264..4264 rows=3
  
 
 - ![scrinshot](https://github.com/Evgenii-379/12-05.md/blob/main/Снимок%20экрана%202024-05-29%20233238.png)
+
+Убрал таблицу inventory
+
+
 - ![scrinshot](https://github.com/Evgenii-379/12-05.md/blob/main/Снимок%20экрана%202024-05-29%20231737.png)
 - ![scrinshot](https://github.com/Evgenii-379/12-05.md/blob/main/Снимок%20экрана%202024-05-29%20213315.png)
 
