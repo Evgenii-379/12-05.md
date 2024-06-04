@@ -3,7 +3,7 @@
 
 ## **Задание 1**
 
-- ![scrinshot](https://github.com/Evgenii-379/12-05.md/blob/main/Снимок%20экрана%202024-05-28%20212524.png)
+- ![scrinshot](https://github.com/Evgenii-379/12-05.md/blob/main/Снимок%20экрана%202024-06-04%20135028.png)
 
 
 
@@ -28,17 +28,33 @@ Table scan on <temporary>  (cost=2.5..2.5 rows=0) (actual time=4264..4264 rows=3
 
 - ![scrinshot](https://github.com/Evgenii-379/12-05.md/blob/main/Снимок%20экрана%202024-05-29%20233238.png)
 
-Убрал таблицу inventory
+
+Убрал таблицу inventory:
+
+SELECT DISTINCT
+  concat(c.last_name, ' ', c.first_name)
+, sum(p.amount) OVER(PARTITION BY c.customer_id, f.title)
+FROM
+  payment p
+, rental r
+, customer c
+, film f
+WHERE
+  date(p.payment_date) = '2005-07-30' AND
+  p.payment_date = r.rental_date AND
+  r.customer_id = c.customer_id;
 
 
 - ![scrinshot](https://github.com/Evgenii-379/12-05.md/blob/main/Снимок%20экрана%202024-05-29%20231737.png)
 - ![scrinshot](https://github.com/Evgenii-379/12-05.md/blob/main/Снимок%20экрана%202024-05-29%20213315.png)
+- ![scrinshot](https://github.com/Evgenii-379/12-05.md/blob/main/Снимок%20экрана%202024-06-04%20140037.png)
+
 
 Добавил индекс в таблицу payment: fk_payment_date
 Таблица payment: индекс - fk_amount
 Таблица customer: индекс - idx_first_name
 Убрал таблицу inventory
-При добавлении индексов время запроса уменьшилось с 3,52 секунд до 3,42
+
 
 
  
